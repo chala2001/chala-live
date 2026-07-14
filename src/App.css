@@ -711,6 +711,11 @@
   color: var(--text-faint);
   text-transform: lowercase;
 }
+.project__badges {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
 .project__star {
   font-family: var(--font-mono);
   font-size: 0.68rem;
@@ -718,6 +723,29 @@
   background: var(--amber-soft);
   padding: 2px 9px;
   border-radius: 100px;
+  white-space: nowrap;
+}
+.project__oss {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-line);
+  padding: 2px 9px;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+.project__note {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-faint);
+}
+.project__note::before {
+  content: '🔒';
+  font-size: 0.85em;
 }
 .project__name {
   font-size: 1.15rem;

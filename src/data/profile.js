@@ -55,13 +55,13 @@ export const experience = [
     type: 'Internship',
     location: 'Colombo · On-site',
     summary:
-      'On the SRE team, building AI-driven tooling to automate operational and compliance workflows.',
+      'On the SRE team, building AI-driven tooling to automate operational and compliance workflows. Shipped two internship projects, one of them released open source.',
     highlights: [
-      'Built an Agentic AI system for browser automation and evidence collection — autonomous agents that navigate cloud consoles and GitHub repositories to gather and document compliance evidence.',
-      'Developed a RAG (Retrieval-Augmented Generation) pipeline with LLMs to surface relevant operational knowledge on demand.',
-      'Worked across cloud consoles, GitHub, and internal systems to reduce manual, repetitive SRE toil through automation.',
+      'Compliance Evidence Submission Portal (open source) — contributed to WSO2’s open-operations GRC platform, adding Agentic AI that autonomously collects and documents compliance evidence from cloud consoles and GitHub repositories.',
+      'Ops Copilot — built a RAG (Retrieval-Augmented Generation) pipeline over operational knowledge so engineers get grounded, source-backed answers to natural-language questions.',
+      'Reduced manual, repetitive SRE toil by automating audit-evidence gathering and knowledge retrieval across cloud consoles, GitHub, and internal systems.',
     ],
-    stack: ['Agentic AI', 'LLM / RAG', 'Python', 'Browser Automation', 'Cloud'],
+    stack: ['Agentic AI', 'LLM / RAG', 'Go', 'Python', 'Open Source'],
   },
   {
     role: 'Undergraduate Teaching Assistant',
@@ -131,9 +131,29 @@ export const skills = [
   },
 ]
 
-// ── Projects (curated flagships from GitHub) ──────────────────
+// ── Projects (curated flagships) ──────────────────────────────
 // category ∈ 'Cloud & DevOps' | 'Full-Stack' | 'AI / ML'
+// Optional flags: openSource (adds a badge), note (shown when there is no public repo).
 export const projects = [
+  {
+    name: 'Compliance Evidence Submission Portal',
+    category: 'AI / ML',
+    featured: true,
+    openSource: true,
+    description:
+      'Built during my SRE internship at WSO2 and released open source under the wso2-open-operations GRC platform. A portal for submitting and managing compliance evidence, backed by Agentic AI that autonomously collects and documents evidence from cloud consoles and GitHub repositories — reducing manual audit toil.',
+    tags: ['Agentic AI', 'Go', 'TypeScript', 'React', 'GRC / Compliance', 'Apache-2.0'],
+    repo: 'https://github.com/wso2-open-operations/grc-tools',
+  },
+  {
+    name: 'Ops Copilot',
+    category: 'AI / ML',
+    featured: true,
+    note: 'Internal · WSO2',
+    description:
+      'An internal operations copilot built during my WSO2 SRE internship — a RAG (Retrieval-Augmented Generation) pipeline over operational knowledge, so engineers can ask natural-language questions and get grounded, source-backed answers on demand.',
+    tags: ['RAG', 'LLM', 'Python', 'Agentic AI', 'SRE Tooling'],
+  },
   {
     name: 'CloudCare — AWS on Terraform',
     category: 'Cloud & DevOps',

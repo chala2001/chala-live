@@ -45,13 +45,20 @@ export default function Projects() {
               >
                 <div className="project__top">
                   <span className="project__cat">{p.category}</span>
-                  {p.featured && <span className="project__star">★ featured</span>}
+                  <div className="project__badges">
+                    {p.openSource && <span className="project__oss">◇ open source</span>}
+                    {p.featured && <span className="project__star">★ featured</span>}
+                  </div>
                 </div>
 
                 <h3 className="project__name">
-                  <a href={p.repo} target="_blank" rel="noreferrer">
-                    {p.name} <ArrowIcon className="project__name-arrow" />
-                  </a>
+                  {p.repo ? (
+                    <a href={p.repo} target="_blank" rel="noreferrer">
+                      {p.name} <ArrowIcon className="project__name-arrow" />
+                    </a>
+                  ) : (
+                    <span>{p.name}</span>
+                  )}
                 </h3>
 
                 <p className="project__desc">{p.description}</p>
@@ -63,9 +70,13 @@ export default function Projects() {
                 </div>
 
                 <div className="project__footer">
-                  <a href={p.repo} target="_blank" rel="noreferrer" className="project__repo">
-                    <GitHubIcon width="17" height="17" /> Source
-                  </a>
+                  {p.repo ? (
+                    <a href={p.repo} target="_blank" rel="noreferrer" className="project__repo">
+                      <GitHubIcon width="17" height="17" /> {p.openSource ? 'View source' : 'Source'}
+                    </a>
+                  ) : (
+                    <span className="project__note">{p.note || 'Private repository'}</span>
+                  )}
                 </div>
               </motion.article>
             ))}
