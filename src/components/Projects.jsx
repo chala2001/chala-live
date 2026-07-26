@@ -75,7 +75,9 @@ export default function Projects() {
                       <GitHubIcon width="17" height="17" /> {p.openSource ? 'View source' : 'Source'}
                     </a>
                   ) : (
-                    <span className="project__note">{p.note || 'Private repository'}</span>
+                    <span className={`project__note ${p.private ? 'project__note--private' : ''}`}>
+                      {p.note || 'Private repository'}
+                    </span>
                   )}
                 </div>
               </motion.article>

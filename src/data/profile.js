@@ -18,7 +18,7 @@ export const profile = {
   status: 'Open to Software Engineering, DevOps & SRE roles',
   email: 'chalakasamith@gmail.com',
   // Drop your resume PDF into /public and it will be linked automatically.
-  resume: '/Chalaka_Perera_Resume.pdf',
+  resume: '/Chalaka_Perera_CV.pdf',
   // Replace /profile.webp in /public with your own photo (see README).
   photo: '/profile.webp',
   githubAvatar: 'https://avatars.githubusercontent.com/u/150885184?v=4',
@@ -61,7 +61,7 @@ export const experience = [
       'Ops Copilot — built a RAG (Retrieval-Augmented Generation) pipeline over operational knowledge so engineers get grounded, source-backed answers to natural-language questions.',
       'Reduced manual, repetitive SRE toil by automating audit-evidence gathering and knowledge retrieval across cloud consoles, GitHub, and internal systems.',
     ],
-    stack: ['Agentic AI', 'LLM / RAG', 'Go', 'Python', 'Open Source'],
+    stack: ['Agentic AI', 'LLM / RAG', 'Azure OpenAI', 'Python', 'Open Source'],
   },
   {
     role: 'Undergraduate Teaching Assistant',
@@ -83,10 +83,10 @@ export const experience = [
 // ── Education ─────────────────────────────────────────────────
 export const education = [
   {
-    degree: 'BSc Engineering — Computer Engineering',
+    degree: 'BSc Eng (Hons) — Computer Engineering',
     school: 'University of Peradeniya',
     period: 'Jun 2022 — Present',
-    detail: 'Final GPA 3.97 / 4.00',
+    detail: 'First Class · Final GPA 3.97 / 4.00',
   },
   {
     degree: 'GCE Advanced Level — Physical Science',
@@ -96,15 +96,22 @@ export const education = [
   },
 ]
 
+// ── Involvement / extra-curricular ────────────────────────────
+export const activities = [
+  { org: 'Institution of Engineers Sri Lanka (IESL)', role: 'Student Member', period: '2025 — Present' },
+  { org: 'ACES — Assoc. of Computer Engineering Students, UoP', role: 'Member', period: '2023 — Present' },
+  { org: 'AIESEC — University of Peradeniya', role: 'Member', period: '2022 — 2024' },
+]
+
 // ── Skills, grouped ───────────────────────────────────────────
 export const skills = [
   {
     group: 'Languages',
-    items: ['Python', 'Java', 'JavaScript', 'TypeScript', 'Go', 'C / C++', 'SQL'],
+    items: ['Python', 'Java', 'JavaScript', 'TypeScript', 'C / C++', 'SQL'],
   },
   {
     group: 'Frontend & Backend',
-    items: ['React', 'Spring Boot', 'FastAPI', 'Node.js', 'Django', 'React Native'],
+    items: ['React', 'Spring Boot', 'FastAPI', 'Django', 'React Native'],
   },
   {
     group: 'Cloud & DevOps',
@@ -141,18 +148,19 @@ export const projects = [
     featured: true,
     openSource: true,
     description:
-      'Built during my SRE internship at WSO2 and released open source under the wso2-open-operations GRC platform. A portal for submitting and managing compliance evidence, backed by Agentic AI that autonomously collects and documents evidence from cloud consoles and GitHub repositories — reducing manual audit toil.',
-    tags: ['Agentic AI', 'Go', 'TypeScript', 'React', 'GRC / Compliance', 'Apache-2.0'],
+      'Built during my WSO2 SRE internship and released open source under the wso2-open-operations GRC platform. A standalone full-stack app that integrates with the GRC platform via its REST API to automate compliance-evidence gathering — without modifying the core system. Its Agentic AI module (Python + Browser-Use / Chromium automation with Azure OpenAI) drives agents that autonomously navigate cloud consoles and GitHub repos to collect and structure evidence end-to-end. FastAPI backend + TypeScript/React frontend, deployed on WSO2 Choreo with Asgardeo (OAuth 2.0 / OIDC).',
+    tags: ['Agentic AI', 'Python', 'FastAPI', 'TypeScript', 'Azure OpenAI', 'Browser-Use', 'WSO2 Choreo', 'OAuth2 / OIDC', 'Apache-2.0'],
     repo: 'https://github.com/wso2-open-operations/grc-tools',
   },
   {
-    name: 'Ops Copilot',
+    name: 'Ops Copilot — SRE Knowledge Assistant',
     category: 'AI / ML',
     featured: true,
+    private: true,
     note: 'Internal · WSO2',
     description:
-      'An internal operations copilot built during my WSO2 SRE internship — a RAG (Retrieval-Augmented Generation) pipeline over operational knowledge, so engineers can ask natural-language questions and get grounded, source-backed answers on demand.',
-    tags: ['RAG', 'LLM', 'Python', 'Agentic AI', 'SRE Tooling'],
+      'An internal operations copilot built during my WSO2 SRE internship — a RAG (Retrieval-Augmented Generation) pipeline over WSO2’s operational knowledge bases (runbooks, procedures, architecture docs), so SRE engineers get source-cited, context-aware answers to natural-language questions. Engineered the ingestion pipeline, vector-store integration and prompt engineering to maximise retrieval precision and reduce hallucinations on domain-specific content.',
+    tags: ['RAG', 'LLM', 'Azure OpenAI', 'Vector DB', 'Python', 'TypeScript'],
   },
   {
     name: 'CloudCare — AWS on Terraform',
@@ -209,13 +217,22 @@ export const projects = [
     repo: 'https://github.com/chala2001/LMS_FullStack_K8s_Deployment',
   },
   {
-    name: 'Darknet Traffic Classification',
+    name: 'Explainable AI Zero-Trust Anomaly Detection',
     category: 'AI / ML',
     featured: true,
     description:
-      'Final-year research project applying a semi-supervised learning approach to darknet traffic classification — model training on partially labelled data with preprocessing and evaluation pipelines.',
-    tags: ['Semi-Supervised ML', 'Python', 'Research', 'Classification'],
+      'Final-year research: an explainable, zero-trust anomaly-detection framework for encrypted network traffic, combining semi-supervised ML with Explainable AI (XAI) to identify and interpret security threats while preserving data privacy. Evaluated on the CIC-IDS-2017 dataset, producing interpretability outputs that support trust and auditability in zero-trust architectures.',
+    tags: ['Semi-Supervised ML', 'Explainable AI (XAI)', 'CIC-IDS-2017', 'Python', 'Research'],
     repo: 'https://github.com/chala2001/bcc_darknet_project',
+  },
+  {
+    name: 'Lightify — Smart Home IoT Lighting',
+    category: 'IoT',
+    featured: false,
+    note: 'Group Project · EngEx 2025',
+    description:
+      'An intelligent smart-home lighting system that detects room occupancy and dynamically adjusts lighting. ESP32 controllers communicate over AWS IoT Core (MQTT), Bluetooth and Wi-Fi with a React Native app and a Spring Boot + MongoDB backend on AWS. Presented at EngEx 2025, University of Peradeniya.',
+    tags: ['ESP32', 'AWS IoT Core', 'MQTT', 'React Native', 'Spring Boot', 'MongoDB'],
   },
   {
     name: 'End-to-End CI/CD Pipeline',
@@ -246,7 +263,7 @@ export const projects = [
   },
 ]
 
-export const projectCategories = ['All', 'Cloud & DevOps', 'Full-Stack', 'AI / ML']
+export const projectCategories = ['All', 'Cloud & DevOps', 'Full-Stack', 'AI / ML', 'IoT']
 
 // ── Certifications (from LinkedIn) ────────────────────────────
 // `highlight: true` gives the card an accent treatment.
@@ -265,7 +282,7 @@ export const certifications = [
   { name: 'Azure Fundamentals', issuer: 'Simplilearn', date: '2026' },
   { name: 'Software Architecture Foundations', issuer: 'LinkedIn', date: 'Jun 2026' },
   { name: 'Learning Git and GitHub', issuer: 'LinkedIn', date: 'Jun 2026' },
-  { name: 'SQL (Basic)', issuer: 'HackerRank', date: 'Jul 2026' },
+  { name: 'SQL', issuer: 'HackerRank', date: 'Jul 2026' },
 ]
 
 // ── Nav sections (also used by react-scroll) ──────────────────

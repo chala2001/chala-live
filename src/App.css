@@ -396,6 +396,29 @@
 }
 .about__edu-gpa { color: var(--accent); font-family: var(--font-mono); }
 
+.about__involved { margin-top: 22px; }
+.about__act {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 7px 0;
+  border-bottom: 1px dashed var(--border);
+}
+.about__act:last-child { border-bottom: none; }
+.about__act-dot { color: var(--accent); flex-shrink: 0; }
+.about__act-text {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  flex: 1;
+}
+.about__act-text strong { color: var(--text); font-weight: 600; }
+.about__act-period {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-faint);
+  white-space: nowrap;
+}
+
 .about__stats {
   display: flex;
   flex-direction: column;
@@ -743,7 +766,7 @@
   font-size: 0.8rem;
   color: var(--text-faint);
 }
-.project__note::before {
+.project__note--private::before {
   content: '🔒';
   font-size: 0.85em;
 }

@@ -1,5 +1,5 @@
 import Reveal from './Reveal.jsx'
-import { about, education } from '../data/profile.js'
+import { about, education, activities } from '../data/profile.js'
 
 export default function About() {
   return (
@@ -29,6 +29,19 @@ export default function About() {
                   <div className="about__edu-sub">
                     {e.school} · <span className="about__edu-gpa">{e.detail}</span>
                   </div>
+                </div>
+              ))}
+            </Reveal>
+
+            <Reveal delay={0.2} className="about__edu about__involved">
+              <span className="about__edu-label"><span className="prompt">$</span> involved</span>
+              {activities.map((a) => (
+                <div className="about__act" key={a.org}>
+                  <span className="about__act-dot">▹</span>
+                  <span className="about__act-text">
+                    <strong>{a.role}</strong> · {a.org}
+                  </span>
+                  <span className="about__act-period">{a.period}</span>
                 </div>
               ))}
             </Reveal>
