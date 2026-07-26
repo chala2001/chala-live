@@ -18,7 +18,7 @@ export const profile = {
   status: 'Open to Software Engineering, DevOps & SRE roles',
   email: 'chalakasamith@gmail.com',
   // Drop your resume PDF into /public and it will be linked automatically.
-  resume: '/Chalaka_Perera_CV.pdf',
+  resume: '/Chalaka_Samith_CV.pdf',
   // Replace /profile.webp in /public with your own photo (see README).
   photo: '/profile.webp',
   githubAvatar: 'https://avatars.githubusercontent.com/u/150885184?v=4',
