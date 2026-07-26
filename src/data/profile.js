@@ -190,15 +190,6 @@ export const projects = [
     repo: 'https://github.com/chala2001/cloud-care-local',
   },
   {
-    name: 'GAM — Go API Gateway',
-    category: 'Cloud & DevOps',
-    featured: true,
-    description:
-      'A lightweight, self-hosted API gateway and management platform, built in Go as a set of independent microservices — routing, authentication, rate limiting, analytics, and API publishing for backend services.',
-    tags: ['Go', 'Microservices', 'API Gateway', 'Auth', 'Rate Limiting'],
-    repo: 'https://github.com/chala2001/GAM',
-  },
-  {
     name: 'LMS University — Full-Stack Platform',
     category: 'Full-Stack',
     featured: true,

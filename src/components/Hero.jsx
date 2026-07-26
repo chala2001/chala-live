@@ -81,7 +81,7 @@ export default function Hero() {
             <Link to="projects" smooth offset={-60} duration={600} className="btn btn-primary">
               View my work <ArrowIcon />
             </Link>
-            <a href={profile.resume} className="btn btn-ghost" download>
+            <a href={profile.resume} className="btn btn-ghost" download="Chalaka Samith CV.pdf">
               <DownloadIcon /> Résumé
             </a>
           </motion.div>
