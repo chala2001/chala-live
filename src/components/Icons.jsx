@@ -50,3 +50,11 @@ export const LocationIcon = (p) => (
     <circle cx="12" cy="10" r="3" />
   </svg>
 )
+
+export const GlobeIcon = (p) => (
+  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden {...p}>
+    <circle cx="12" cy="12" r="9" />
+    <path d="M3 12h18" />
+    <path d="M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18Z" />
+  </svg>
+)

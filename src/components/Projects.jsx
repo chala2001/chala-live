@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Reveal from './Reveal.jsx'
 import { projects, projectCategories, profile } from '../data/profile.js'
-import { GitHubIcon, ArrowIcon } from './Icons.jsx'
+import { GitHubIcon, ArrowIcon, GlobeIcon } from './Icons.jsx'
 
 export default function Projects() {
   const [filter, setFilter] = useState('All')
@@ -70,15 +70,25 @@ export default function Projects() {
                 </div>
 
                 <div className="project__footer">
-                  {p.repo ? (
-                    <a href={p.repo} target="_blank" rel="noreferrer" className="project__repo">
-                      <GitHubIcon width="17" height="17" /> {p.openSource ? 'View source' : 'Source'}
-                    </a>
-                  ) : (
-                    <span className={`project__note ${p.private ? 'project__note--private' : ''}`}>
-                      {p.note || 'Private repository'}
-                    </span>
-                  )}
+                  <div className="project__links">
+                    {p.repo && (
+                      <a href={p.repo} target="_blank" rel="noreferrer" className="project__repo">
+                        <GitHubIcon width="17" height="17" /> {p.openSource ? 'View source' : 'Source'}
+                      </a>
+                    )}
+                    {p.web && (
+                      <a href={p.web} target="_blank" rel="noreferrer" className="project__repo">
+                        <GlobeIcon width="17" height="17" /> Project page
+                      </a>
+                    )}
+                    {!p.repo && !p.web && (
+                      <span className={`project__note ${p.private ? 'project__note--private' : ''}`}>
+                        {p.note || 'Private repository'}
+                      </span>
+                    )}
+                  </div>
+                  {/* Group projects keep their scope note visible next to the links. */}
+                  {p.note && (p.repo || p.web) && <span className="project__note">{p.note}</span>}
                 </div>
               </motion.article>
             ))}

@@ -812,6 +812,16 @@
 .project__footer {
   border-top: 1px solid var(--border);
   padding-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px 18px;
+}
+.project__links {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
 }
 .project__repo {
   display: inline-flex;

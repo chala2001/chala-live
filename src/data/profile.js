@@ -221,10 +221,12 @@ export const projects = [
     name: 'Lightify, Smart Home IoT Lighting',
     category: 'IoT',
     featured: false,
-    note: 'Group · EngEx 2025 · my scope: firmware',
+    note: 'Group · my scope: firmware',
     description:
       'A smart-home lighting system that detects room occupancy and adjusts the lights to match. I wrote the ESP32 firmware, in C and C++, that the whole system runs on: reading the occupancy sensors, driving the lights, and letting a new device join over Wi-Fi or Bluetooth without being reprogrammed. The devices talk to AWS IoT Core over MQTT so the backend can read sensor data and send commands back in real time. Presented at EngEx 2025, University of Peradeniya.',
     tags: ['ESP32', 'C / C++', 'AWS IoT Core', 'MQTT', 'Wi-Fi / BLE Provisioning', 'Spring Boot', 'MongoDB'],
+    repo: 'https://github.com/cepdnaclk/e20-3yp-Smart-IOT-Indoor-Lighting-System',
+    web: 'https://cepdnaclk.github.io/e20-3yp-Smart-IOT-Indoor-Lighting-System/',
   },
   {
     name: 'Artery Resolver, Cardiovascular Risk Analysis',
@@ -234,6 +236,8 @@ export const projects = [
     description:
       'Automated Flow-Mediated Dilation, a test for early cardiovascular risk that clinicians were measuring by hand. The tool reads an ultrasound video, detects the artery walls with OpenCV and tracks how far the artery widens as blood flows through it, then pairs that with blood-flow velocity analysis to turn each scan into a summarised report a doctor can act on. I built the Java desktop app and the MySQL database behind it, with every record scoped so a doctor reaches only their own patients.',
     tags: ['Java', 'Java Swing', 'JDBC', 'MySQL', 'Python', 'OpenCV', 'Computer Vision'],
+    repo: 'https://github.com/cepdnaclk/e20-co227-Artery-Resolver',
+    web: 'https://cepdnaclk.github.io/e20-co227-Artery-Resolver/',
   },
   {
     name: 'End-to-End CI/CD Pipeline',
