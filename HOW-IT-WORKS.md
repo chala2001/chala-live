@@ -1,6 +1,6 @@
-# 🧩 How It Works — The Code, Explained
+# 🧩 How It Works: The Code, Explained
 
-This document explains **how your whole portfolio is put together** — every folder,
+This document explains **how your whole portfolio is put together**: every folder,
 every file, and how they cooperate to produce the site you see in the browser. It's
 written so that even if you've never touched React before, you'll understand what
 each piece does and where to look when you want to change something.
@@ -19,7 +19,7 @@ each piece does and where to look when you want to change something.
 8. [The smooth-scroll navigation (react-scroll)](#8-the-smooth-scroll-navigation-react-scroll)
 9. [The styling system (CSS variables)](#9-the-styling-system-css-variables)
 10. [Component-by-component tour](#10-component-by-component-tour)
-11. [How it all connects — one diagram](#11-how-it-all-connects--one-diagram)
+11. [How it all connects, one diagram](#11-how-it-all-connects-one-diagram)
 
 ---
 
@@ -27,7 +27,7 @@ each piece does and where to look when you want to change something.
 
 - It's a **single-page website** built with **React** (a JavaScript UI library) and
   **Vite** (a fast build tool).
-- **All your content** — name, projects, skills, certs — lives in **one file**:
+- **All your content** (name, projects, skills, certs) lives in **one file**:
   [`src/data/profile.js`](src/data/profile.js).
 - The visual **sections** (Hero, About, Projects…) are **React components** in
   [`src/components/`](src/components/). Each one reads from that data file and renders it.
@@ -35,7 +35,7 @@ each piece does and where to look when you want to change something.
   **light/dark theme toggle**.
 - **Framer Motion** adds the fade-in animations; **react-scroll** makes the navbar
   links glide smoothly to each section.
-- There is **no backend and no database** — it's all static files.
+- There is **no backend and no database**. It's all static files.
 
 ---
 
@@ -72,7 +72,7 @@ chalaLive/
 │   └── (resume.pdf)        ← YOUR RÉSUMÉ goes here
 │
 ├── src/                    ← all the source code
-│   ├── main.jsx            ← the entry point — mounts React into index.html
+│   ├── main.jsx            ← the entry point, mounts React into index.html
 │   ├── App.jsx             ← lists the sections in order
 │   ├── index.css           ← global styles + the theme variables (colours)
 │   ├── App.css             ← styles for the individual components
@@ -135,7 +135,7 @@ When a visitor opens your site, this chain fires in order:
 5. The finished page appears, fully styled and animated.
 ```
 
-So `index.html` is nearly empty — **React builds the entire page in the browser**
+So `index.html` is nearly empty. **React builds the entire page in the browser**
 from your components and your data. That's what "single-page React app" means.
 
 ---
@@ -156,7 +156,7 @@ For example, the Skills section doesn't say "Python, Java, …" in its code. It 
 "for each skill group in the data, draw a card." Here's the actual pattern:
 
 ```jsx
-// src/data/profile.js  — the DATA
+// src/data/profile.js  (the DATA)
 export const skills = [
   { group: 'Languages', items: ['Python', 'Java', 'JavaScript'] },
   { group: 'Cloud & DevOps', items: ['AWS', 'Docker', 'Kubernetes'] },
@@ -164,7 +164,7 @@ export const skills = [
 ```
 
 ```jsx
-// src/components/Skills.jsx  — the CODE that DISPLAYS it
+// src/components/Skills.jsx  (the CODE that DISPLAYS it)
 import { skills } from '../data/profile.js'
 
 // for each group in the data, render a card:
@@ -178,7 +178,7 @@ import { skills } from '../data/profile.js'
 
 `.map()` is a JavaScript function that means **"do this for every item in the
 list."** So if you add a fourth skill to the array, a fourth chip appears
-automatically — **you never touch `Skills.jsx`.**
+automatically, and **you never touch `Skills.jsx`.**
 
 👉 **This is why updating your portfolio = editing one data file.** Full instructions
 are in **[UPDATING-CONTENT.md](UPDATING-CONTENT.md)**.
@@ -189,7 +189,7 @@ are in **[UPDATING-CONTENT.md](UPDATING-CONTENT.md)**.
 
 The light/dark toggle is powered by **CSS variables** + a small piece of React state.
 
-**How colours are defined** — in `src/index.css`, every colour is a variable:
+**How colours are defined.** In `src/index.css`, every colour is a variable:
 
 ```css
 :root {                    /* DARK theme (the default) */
@@ -207,7 +207,7 @@ The light/dark toggle is powered by **CSS variables** + a small piece of React s
 
 Every component's CSS uses these variables, e.g. `background: var(--bg)`.
 
-**How the toggle works** — [`ThemeContext.jsx`](src/context/ThemeContext.jsx):
+**How the toggle works**, in [`ThemeContext.jsx`](src/context/ThemeContext.jsx):
 
 1. It remembers the current theme (`'dark'` or `'light'`) in React state.
 2. When you click the sun/moon button, it flips that value.
@@ -216,7 +216,7 @@ Every component's CSS uses these variables, e.g. `background: var(--bg)`.
 5. It **saves your choice** in the browser's `localStorage`, so the site remembers
    your preference next visit.
 
-To change your brand colour site-wide, you edit **one line** — `--accent` — and
+To change your brand colour site-wide, you edit **one line**, `--accent`, and
 every button, link, and highlight updates. (See UPDATING-CONTENT.md § "Change the
 accent colour".)
 
@@ -258,11 +258,11 @@ The navbar links don't use normal HTML anchors. They use react-scroll's `<Link>`
 <Link to="projects" smooth offset={-72} duration={500}>projects</Link>
 ```
 
-- `to="projects"` — the `id` of the section to scroll to (each `<section>` has an id
+- `to="projects"`: the `id` of the section to scroll to (each `<section>` has an id
   like `id="projects"`).
-- `smooth` — glide instead of jump.
-- `offset={-72}` — stop 72px early so the fixed navbar doesn't cover the heading.
-- `spy` (used in the navbar) — automatically highlights the link for whichever
+- `smooth`: glide instead of jump.
+- `offset={-72}`: stop 72px early so the fixed navbar doesn't cover the heading.
+- `spy` (used in the navbar): automatically highlights the link for whichever
   section is currently on screen.
 
 The section `id`s and the navbar links both come from the **same `navLinks` array**
@@ -274,14 +274,14 @@ in `profile.js`, so they can never fall out of sync.
 
 There are exactly **two** stylesheets:
 
-- **`src/index.css`** — the *design system*: the colour variables (both themes),
+- **`src/index.css`** is the *design system*: the colour variables (both themes),
   fonts, spacing, the background grid, buttons, chips, and shared helpers like
   `.section-label`. **This is where the "look" is defined.**
-- **`src/App.css`** — the *component styles*: the specific layout of the navbar,
+- **`src/App.css`** holds the *component styles*: the specific layout of the navbar,
   hero, cards, timeline, etc. Class names are namespaced by section (`.hero__name`,
   `.project__tag`) so they never clash.
 
-No Tailwind, no Bootstrap, no styled-components. Just CSS — which keeps the bundle
+No Tailwind, no Bootstrap, no styled-components. Just CSS, which keeps the bundle
 small and the design genuinely yours.
 
 ---
@@ -299,8 +299,8 @@ small and the design genuinely yours.
 | **Projects.jsx** | Filterable project cards (All / Cloud & DevOps / Full-Stack / AI) | `projects`, `projectCategories`, `profile` |
 | **Contact.jsx** | The closing call-to-action + email + socials | `profile` |
 | **Footer.jsx** | The bottom credit line + social icons | `profile` |
-| **Reveal.jsx** | *(not a section)* the shared scroll-in animation wrapper | — |
-| **Icons.jsx** | *(not a section)* all SVG icons as small components | — |
+| **Reveal.jsx** | *(not a section)* the shared scroll-in animation wrapper | n/a |
+| **Icons.jsx** | *(not a section)* all SVG icons as small components | n/a |
 
 Every section follows the **same recipe**:
 1. `import` its slice of data from `profile.js`.
@@ -312,7 +312,7 @@ Once you've read one component, you understand them all.
 
 ---
 
-## 11. How it all connects — one diagram
+## 11. How it all connects, one diagram
 
 ```
                     ┌───────────────────────────────┐
@@ -342,11 +342,11 @@ Once you've read one component, you understand them all.
 
 **In one sentence:** your **data** flows into **components**, which are ordered by
 **App.jsx**, styled by **CSS variables**, animated by **Framer Motion**, navigated by
-**react-scroll**, and mounted into **index.html** by **main.jsx** — then Vite builds
+**react-scroll**, and mounted into **index.html** by **main.jsx**. Then Vite builds
 it all into static files that Vercel serves to the world.
 
 ---
 
 **Next:** ready to change something? Go to
-**[UPDATING-CONTENT.md](UPDATING-CONTENT.md)** — it shows the exact copy-paste
+**[UPDATING-CONTENT.md](UPDATING-CONTENT.md)**. It shows the exact copy-paste
 patterns for editing every part of your portfolio.

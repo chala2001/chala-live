@@ -25,7 +25,7 @@
 - 🎓 &nbsp; Computer Engineering at University of Peradeniya (UG) · GPA 3.971 / 4.00
 - 🌐 &nbsp; Building full-stack web apps with React, Spring Boot, Django, Node.js & FastAPI
 - ☁️ &nbsp; Architecting cloud-native systems on AWS & Azure with Docker & Kubernetes
-- 🤖 &nbsp; Developing AI/ML & Agentic AI systems — RAG pipelines, LangChain agents, MLOps workflows
+- 🤖 &nbsp; Developing AI/ML & Agentic AI systems: RAG pipelines, LangChain agents, MLOps workflows
 - 📡 &nbsp; Integrating IoT devices with real-time backend data pipelines
 - 🔧 &nbsp; Automating everything with Jenkins, GitHub Actions & Terraform
 - 💬 &nbsp; Ask me about System Design, DevOps, or AI-powered backends
@@ -73,7 +73,7 @@
 
 | Domain | What I Deliver |
 |:---:|:---|
-| 🌐 &nbsp; **Full Stack** | End-to-end web apps — React frontends, Spring Boot / Django / Node.js / FastAPI backends, REST APIs |
+| 🌐 &nbsp; **Full Stack** | End-to-end web apps with React frontends, Spring Boot / Django / Node.js / FastAPI backends, REST APIs |
 | ☁️ &nbsp; **Cloud & DevOps** | Dockerized microservices, Kubernetes orchestration, CI/CD with Jenkins & GitHub Actions, AWS & Azure deployments |
 | 🤖 &nbsp; **AI / ML & Agentic AI** | RAG pipelines, LangChain-powered agents, browser automation agents, ML model deployment with TensorFlow |
 | 📡 &nbsp; **IoT Systems** | Embedded device integration, real-time data pipelines, backend connectivity |
@@ -120,7 +120,7 @@
 
 <div align="center">
 
-*"The best systems are invisible — they just work."*
+*"The best systems are invisible. They just work."*
 
 <br/>
 

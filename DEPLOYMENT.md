@@ -1,4 +1,4 @@
-# 🚀 Deployment Guide — Putting Your Portfolio Online
+# 🚀 Deployment Guide: Putting Your Portfolio Online
 
 This guide takes you from "it works on my laptop" to "anyone in the world can visit
 my portfolio at a real URL." It assumes **zero prior deployment experience** and
@@ -15,11 +15,11 @@ Read it top to bottom the first time. After that, deploying updates becomes a si
 2. [What is Vercel, and why we use it](#2-what-is-vercel-and-why-we-use-it)
 3. [How your project gets built (the mental model)](#3-how-your-project-gets-built-the-mental-model)
 4. [Prerequisites (one-time setup)](#4-prerequisites-one-time-setup)
-5. [Step 1 — Put your code on GitHub](#5-step-1--put-your-code-on-github)
-6. [Step 2 — Deploy to Vercel (the easy way)](#6-step-2--deploy-to-vercel-the-easy-way)
-7. [Step 3 — This is CI/CD (and why recruiters care)](#7-step-3--this-is-cicd-and-why-recruiters-care)
-8. [Step 4 — Add a custom domain](#8-step-4--add-a-custom-domain)
-9. [Alternative — Deploy with the Vercel CLI](#9-alternative--deploy-with-the-vercel-cli)
+5. [Step 1: Put your code on GitHub](#5-step-1-put-your-code-on-github)
+6. [Step 2: Deploy to Vercel (the easy way)](#6-step-2-deploy-to-vercel-the-easy-way)
+7. [Step 3: This is CI/CD (and why recruiters care)](#7-step-3-this-is-cicd-and-why-recruiters-care)
+8. [Step 4: Add a custom domain](#8-step-4-add-a-custom-domain)
+9. [Alternative: Deploy with the Vercel CLI](#9-alternative-deploy-with-the-vercel-cli)
 10. [Everyday workflow (after first deploy)](#10-everyday-workflow-after-first-deploy)
 11. [Troubleshooting](#11-troubleshooting)
 12. [Glossary](#12-glossary)
@@ -30,13 +30,13 @@ Read it top to bottom the first time. After that, deploying updates becomes a si
 
 Right now your site runs with `npm run dev`. That starts a **development server** on
 your own computer at `http://localhost:5173`. The word `localhost` literally means
-"this machine" — **nobody else on the internet can open that link.** It only exists
+"this machine": **nobody else on the internet can open that link.** It only exists
 while your laptop is on and the command is running.
 
 **Deploying** means:
 
 1. Turning your React source code into a small bundle of plain, optimized files
-   (`.html`, `.css`, `.js`) — this is called **building**.
+   (`.html`, `.css`, `.js`). This is called **building**.
 2. Copying those files onto a computer that is always on and connected to the
    internet (a **server**), owned by a hosting company.
 3. Giving that server a public web address (a **URL**) so anyone can visit.
@@ -53,11 +53,11 @@ frameworks like React, Vite, and Next.js. Think of it as a service that:
 
 - **Watches your GitHub repository.** Every time you push new code, it notices.
 - **Builds your project for you** (it runs `npm install` + `npm run build` on its
-  own servers — you don't do it manually).
-- **Publishes the result** to a global **CDN** (Content Delivery Network — a network
+  own servers, so you don't do it manually).
+- **Publishes the result** to a global **CDN** (Content Delivery Network: a network
   of servers around the world, so your site loads fast whether the visitor is in
   Colombo or California).
-- **Gives you HTTPS automatically** (the padlock 🔒 in the browser — secure by
+- **Gives you HTTPS automatically** (the padlock 🔒 in the browser, secure by
   default, no configuration).
 - **Gives you a free URL** like `your-project.vercel.app`.
 
@@ -68,11 +68,11 @@ frameworks like React, Vite, and Next.js. Think of it as a service that:
 | **Vercel** ✅ | Lowest | Free | Auto-detects Vite, auto-builds on push, free HTTPS + domain |
 | Netlify | Low | Free | Very similar to Vercel; also a great choice |
 | GitHub Pages | Medium | Free | Works, but needs extra config for Vite routing |
-| Your own VPS | High | ~$5/mo | You manage the server, updates, HTTPS — overkill here |
+| Your own VPS | High | ~$5/mo | You manage the server, updates, HTTPS. Overkill here |
 
 For a static React portfolio, **Vercel is the path of least resistance.**
 
-> 💡 **"Static" site?** Your portfolio has no backend and no database — it's just
+> 💡 **"Static" site?** Your portfolio has no backend and no database. It's just
 > files. That's called a **static site**, and static sites are the easiest and
 > cheapest thing to host on earth. This is exactly why we designed it this way.
 
@@ -100,7 +100,7 @@ Here is the whole pipeline, start to finish:
   configures.
 - Vercel then serves the contents of `dist/` to the world.
 
-You never run these on Vercel yourself — **it does all three automatically** every
+You never run these on Vercel yourself. **It does all three automatically** every
 time you push to GitHub.
 
 ---
@@ -143,12 +143,12 @@ GitHub is where your code lives online. Vercel reads from it.
 ### 4.4 A Vercel account (create now, takes 1 minute)
 
 1. Go to <https://vercel.com/signup>.
-2. Click **"Continue with GitHub"** — this links the two accounts so Vercel can see
+2. Click **"Continue with GitHub"**. This links the two accounts so Vercel can see
    your repositories. This is the smoothest setup.
 
 ---
 
-## 5. Step 1 — Put your code on GitHub
+## 5. Step 1: Put your code on GitHub
 
 Your portfolio currently exists only on your laptop. We need to push it to a GitHub
 repository first.
@@ -175,8 +175,8 @@ git commit -m "Initial commit: personal portfolio"   # save a snapshot
 
 1. Go to <https://github.com/new>.
 2. **Repository name:** `portfolio` (or `chalaka-portfolio`).
-3. Visibility: **Public** (recommended — recruiters can see your clean code).
-4. **Do NOT** tick "Add a README" / ".gitignore" / "license" — your folder already
+3. Visibility: **Public** (recommended, so recruiters can see your clean code).
+4. **Do NOT** tick "Add a README" / ".gitignore" / "license". Your folder already
    has these, and adding them on GitHub causes a conflict.
 5. Click **Create repository**.
 
@@ -198,13 +198,13 @@ git push -u origin main
 > 🔑 If Git asks for a password, GitHub no longer accepts your account password over
 > HTTPS. Create a **Personal Access Token**: GitHub → Settings → Developer settings →
 > Personal access tokens → Tokens (classic) → Generate new token → tick `repo` scope
-> → copy it → paste it as the password. (Or set up SSH keys — see GitHub's docs.)
+> → copy it → paste it as the password. (Or set up SSH keys, see GitHub's docs.)
 
-Refresh your GitHub repo page — your files are now online. ✅
+Refresh your GitHub repo page and your files are now online. ✅
 
 ---
 
-## 6. Step 2 — Deploy to Vercel (the easy way)
+## 6. Step 2: Deploy to Vercel (the easy way)
 
 Now the satisfying part.
 
@@ -223,7 +223,7 @@ Now the satisfying part.
 
    You do **not** need to change anything. (These match your `vercel.json`.)
 4. Click **Deploy**.
-5. Wait ~30–60 seconds. You'll see build logs streaming (this is Vercel running
+5. Wait ~30-60 seconds. You'll see build logs streaming (this is Vercel running
    `npm install` and `npm run build` on its servers). When it finishes you get
    **confetti 🎉** and a live URL like:
 
@@ -235,7 +235,7 @@ Now the satisfying part.
 
 ---
 
-## 7. Step 3 — This is CI/CD (and why recruiters care)
+## 7. Step 3: This is CI/CD (and why recruiters care)
 
 You just set up a **CI/CD pipeline** without writing any pipeline code. Here's what
 that means and why it's worth mentioning in interviews:
@@ -256,9 +256,9 @@ git push
 ```
 
 The moment you `git push`, **Vercel automatically rebuilds and redeploys** your live
-site — usually within a minute. No manual upload, ever.
+site, usually within a minute. No manual upload, ever.
 
-**Bonus — Preview Deployments:** if you push to a *different* branch (not `main`),
+**Preview deployments (bonus):** if you push to a *different* branch (not `main`),
 Vercel builds a separate **preview URL** just for that branch, so you can test
 changes before they hit your real site. This is exactly how professional teams ship
 software. Mentioning "my portfolio auto-deploys via a Git-based CI/CD pipeline on
@@ -266,7 +266,7 @@ Vercel" signals real DevOps awareness. 🎯
 
 ---
 
-## 8. Step 4 — Add a custom domain
+## 8. Step 4: Add a custom domain
 
 `portfolio-chala2001.vercel.app` works forever and is free. But
 `chalakaperera.dev` looks far more professional on a CV.
@@ -277,11 +277,11 @@ Domains are rented yearly. Good, honest registrars:
 
 | Registrar | Notes |
 |---|---|
-| **Cloudflare** | Sells at cost, no markup — usually the cheapest. |
+| **Cloudflare** | Sells at cost, no markup, so usually the cheapest. |
 | **Porkbun** | Cheap, clean UI, free WHOIS privacy. |
 | **Namecheap** | Popular, frequent promos. |
 
-Typical prices per year: `.dev` ~$12, `.me` ~$10–20, `.xyz` / `.site` ~$1–3 (first
+Typical prices per year: `.dev` ~$12, `.me` ~$10-20, `.xyz` / `.site` ~$1-3 (first
 year). For a developer, **`.dev` looks the most professional.** Search for
 `chalakaperera.dev`, `chalaka.dev`, etc., and buy one.
 
@@ -289,14 +289,14 @@ year). For a developer, **`.dev` looks the most professional.** Search for
 
 1. In Vercel: open your project → **Settings** → **Domains**.
 2. Type your domain (e.g. `chalakaperera.dev`) → **Add**.
-3. Vercel shows you **DNS records** to add — usually either:
+3. Vercel shows you **DNS records** to add, usually either:
    - An **`A` record** pointing to a Vercel IP, or
    - A **`CNAME` record** pointing to `cname.vercel-dns.com`.
 4. Go to your **registrar's dashboard** → DNS settings → add exactly the records
    Vercel gave you.
-5. Wait for **DNS propagation** (the internet updating its address book) — anywhere
+5. Wait for **DNS propagation** (the internet updating its address book), anywhere
    from a few minutes to a couple of hours.
-6. Vercel auto-issues a free **HTTPS certificate**. Done — your site now loads at
+6. Vercel auto-issues a free **HTTPS certificate**. Done, your site now loads at
    your custom domain with a padlock. 🔒
 
 > 💡 **Easiest possible route:** if you buy the domain **through Cloudflare** and
@@ -305,7 +305,7 @@ year). For a developer, **`.dev` looks the most professional.** Search for
 
 ---
 
-## 9. Alternative — Deploy with the Vercel CLI
+## 9. Alternative: Deploy with the Vercel CLI
 
 The GitHub method in Step 2 is recommended (because it gives you auto-deploys). But
 if you ever want to deploy **directly from your terminal** without GitHub, you can:
@@ -324,7 +324,7 @@ vercel
 vercel --prod
 ```
 
-The CLI will ask a few questions the first time (project name, etc.) — accept the
+The CLI will ask a few questions the first time (project name, etc.). Accept the
 defaults. This is handy for quick one-off deploys, but for your portfolio the
 **GitHub → Vercel auto-deploy** setup is better long-term.
 
@@ -335,7 +335,7 @@ defaults. This is handy for quick one-off deploys, but for your portfolio the
 Once everything above is done once, your entire update loop is:
 
 ```bash
-# make your edits (usually just src/data/profile.js — see UPDATING-CONTENT.md)
+# make your edits (usually just src/data/profile.js, see UPDATING-CONTENT.md)
 
 # preview locally first (optional but smart)
 npm run dev            # open http://localhost:5173 and check it looks right
@@ -354,7 +354,7 @@ Vercel rebuilds and your live site updates in ~1 minute. That's it.
 
 **❌ "Build failed" on Vercel**
 - Read the red lines in the build log. 99% of the time it's a typo in
-  `src/data/profile.js` — a **missing comma**, an **unclosed quote**, or an
+  `src/data/profile.js`: a **missing comma**, an **unclosed quote**, or an
   **unclosed bracket** `{ } [ ]`.
 - Reproduce it locally to find the exact line: run `npm run build` on your machine.
   The error points to the file and line number.
@@ -369,7 +369,7 @@ Vercel rebuilds and your live site updates in ~1 minute. That's it.
   `profile.js` references.
 
 **❌ Changes not appearing on the live site**
-- Did you `git push`? Check the **Deployments** tab in Vercel — a new deployment
+- Did you `git push`? Check the **Deployments** tab in Vercel. A new deployment
   should appear after each push. If not, the push didn't reach GitHub.
 - Hard-refresh your browser: `Ctrl+Shift+R` (Linux/Windows) to bypass cache.
 
@@ -393,7 +393,7 @@ Vercel rebuilds and your live site updates in ~1 minute. That's it.
 | **push** | Uploading your commits to GitHub. |
 | **CDN** | A worldwide network of servers that makes your site load fast everywhere. |
 | **HTTPS** | Encrypted, secure connection (the 🔒 padlock). Vercel gives it free. |
-| **DNS** | The internet's address book — maps `yourname.dev` to a server. |
+| **DNS** | The internet's address book. Maps `yourname.dev` to a server. |
 | **CI/CD** | Automatic build + deploy on every code change. You now have this. |
 | **domain / registrar** | Your web address, and the company you rent it from. |
 

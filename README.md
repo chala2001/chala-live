@@ -1,4 +1,4 @@
-# Chalaka Perera — Portfolio
+# Chalaka Perera · Portfolio
 
 A single-page personal portfolio. **React + Vite**, no backend, no database.
 Terminal / engineer aesthetic, dark + light themes, smooth-scroll navigation and
@@ -10,13 +10,13 @@ subtle scroll animations.
 
 ## 📚 Documentation
 
-Three detailed guides live alongside this README — read them in this order:
+Three detailed guides live alongside this README. Read them in this order:
 
-1. **[HOW-IT-WORKS.md](HOW-IT-WORKS.md)** — how the whole codebase fits together
+1. **[HOW-IT-WORKS.md](HOW-IT-WORKS.md)**: how the whole codebase fits together
    (folders, data-driven design, theming, animations). Start here to understand it.
-2. **[UPDATING-CONTENT.md](UPDATING-CONTENT.md)** — exactly where and how to change
+2. **[UPDATING-CONTENT.md](UPDATING-CONTENT.md)**: exactly where and how to change
    your content over time (add a job, cert, project, swap your photo/résumé, recolour).
-3. **[DEPLOYMENT.md](DEPLOYMENT.md)** — what Vercel is and every step + command to put
+3. **[DEPLOYMENT.md](DEPLOYMENT.md)**: what Vercel is and every step + command to put
    the site online for free, with a custom domain.
 
 ---
@@ -41,12 +41,12 @@ npm run preview  # serve the built /dist locally
 
 **Almost everything lives in one file:** [`src/data/profile.js`](src/data/profile.js)
 
-- `profile` — name, roles, tagline, email, social links
-- `about` — bio paragraphs + the three stat tiles
-- `experience` — your WSO2 SRE internship (add future roles here)
-- `education` — degree + GPA
-- `skills` — grouped tech list
-- `projects` — the curated project cards (set `featured: true` to highlight)
+- `profile`: name, roles, tagline, email, social links
+- `about`: bio paragraphs + the three stat tiles
+- `experience`: your WSO2 SRE internship (add future roles here)
+- `education`: degree + GPA
+- `skills`: grouped tech list
+- `projects`: the curated project cards (set `featured: true` to highlight)
 
 Change text there and the whole site updates. No component edits needed for content.
 
@@ -58,7 +58,7 @@ Change text there and the whole site updates. No component edits needed for cont
    - CLI: `cwebp -q 82 photo.jpg -o profile.webp`
 3. Save it as **`public/profile.webp`**.
 
-Until you add it, the site automatically shows your GitHub avatar as a fallback —
+Until you add it, the site automatically shows your GitHub avatar as a fallback,
 so it never looks broken.
 
 ### Your résumé
@@ -79,13 +79,13 @@ then extend the project cards in `profile.js` + `Projects.jsx` to show them.
 2. Go to [vercel.com](https://vercel.com) → **Add New → Project** → import that repo.
 3. Vercel auto-detects Vite. Just click **Deploy**. That's it.
 
-Every `git push` to `main` now auto-builds and deploys (this is your CI/CD —
+Every `git push` to `main` now auto-builds and deploys (this is your CI/CD,
 a nice thing to mention to recruiters).
 
 ### Custom domain (cheap / free options)
 
 - **Free:** your `*.vercel.app` URL works immediately.
-- **Cheap:** buy a domain (`chalakaperera.dev`, `.me`, `.xyz` are ~\$3–12/yr on
+- **Cheap:** buy a domain (`chalakaperera.dev`, `.me`, `.xyz` are ~\$3-12/yr on
   Namecheap / Porkbun / Cloudflare), then in Vercel → **Project → Settings →
   Domains → Add**, and point the domain's DNS to Vercel (Vercel shows the exact
   records). HTTPS is automatic.

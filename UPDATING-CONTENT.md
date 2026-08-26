@@ -1,4 +1,4 @@
-# ✏️ Updating Your Portfolio — Where & How to Change Everything
+# ✏️ Updating Your Portfolio: Where & How to Change Everything
 
 Your portfolio is **data-driven**: almost every word, link, and list on the site
 comes from **one file**:
@@ -9,7 +9,7 @@ Change something there, save, and the site updates. This guide shows the **exact
 edit for every common change, with copy-paste examples.
 
 > 🧠 **You do not need to know React** to use this guide. You're editing simple
-> lists and text. Just keep the punctuation intact — see
+> lists and text. Just keep the punctuation intact, see
 > [The 5 rules that prevent 99% of errors](#-the-5-rules-that-prevent-99-of-errors)
 > at the bottom.
 
@@ -50,7 +50,7 @@ git commit -m "Update: <what you changed>"
 git push               # Vercel auto-deploys your live site in ~1 minute
 ```
 
-That's the entire loop. Keep `npm run dev` running in a terminal while you edit — it
+That's the entire loop. Keep `npm run dev` running in a terminal while you edit; it
 **hot-reloads**, so you get instant feedback.
 
 ---
@@ -131,7 +131,7 @@ The animated titles under your name come from the `roles` list:
 
 - **Remove** one → delete its line.
 
-Keep them short — they're meant to cycle quickly.
+Keep them short. They're meant to cycle quickly.
 
 ---
 
@@ -177,7 +177,7 @@ export const experience = [
   {
     role: 'Site Reliability Engineering Intern',
     company: 'WSO2',
-    period: 'Apr 2026 — Oct 2026',
+    period: 'Apr 2026 - Present',
     type: 'Internship',
     location: 'Colombo · On-site',
     summary: 'On the SRE team, building AI-driven tooling…',
@@ -199,13 +199,13 @@ export const experience = [
   {
     role: 'Software Engineer',              // your new job
     company: 'Some Company',
-    period: 'Nov 2026 — Present',
+    period: 'Nov 2026 - Present',
     type: 'Full-time',
     location: 'Colombo · Hybrid',
     summary: 'One-line description of the role.',
     highlights: [
       'A concrete achievement with impact.',
-      'Another achievement — quantify it if you can.',
+      'Another achievement, quantify it if you can.',
     ],
     stack: ['React', 'Spring Boot', 'AWS'],
   },
@@ -218,7 +218,7 @@ export const experience = [
 
 Field meanings:
 - `type` shows as a small chip (e.g. `Internship`, `Full-time`, `Part-time`).
-- `location` is optional — delete the line if you don't want it.
+- `location` is optional, delete the line if you don't want it.
 - `highlights` become the bullet points.
 - `stack` become the small tech tags at the bottom.
 
@@ -229,13 +229,13 @@ Field meanings:
 ```js
 export const education = [
   {
-    degree: 'BSc Engineering — Computer Engineering',
+    degree: 'BSc Eng (Hons) in Computer Engineering',
     school: 'University of Peradeniya',
-    period: 'Jun 2022 — Present',
+    period: 'Jun 2022 - Present',
     detail: 'Final GPA 3.97 / 4.00',
   },
   {
-    degree: 'GCE Advanced Level — Physical Science',
+    degree: 'GCE Advanced Level, Physical Science',
     school: 'Royal College, Colombo',
     period: 'Completed',
     detail: '3 A passes · Z-score 2.0291',
@@ -243,7 +243,7 @@ export const education = [
 ]
 ```
 
-When you graduate, update the first entry's `period` to e.g. `Jun 2022 — 2027` and
+When you graduate, update the first entry's `period` to e.g. `Jun 2022 - 2027` and
 `detail` to your final classification. Add more entries the same way (copy a block,
 edit it).
 
@@ -270,7 +270,7 @@ export const skills = [
 - **Add a whole new group** → copy a `{ group: …, items: […] }` block and paste it.
 - **Remove** → delete the `'skill'` or the whole block.
 
-Example — adding Rust to Languages:
+For example, adding Rust to Languages:
 
 ```js
     items: ['Python', 'Java', 'JavaScript', 'TypeScript', 'Go', 'Rust', 'C / C++', 'SQL'],
@@ -291,12 +291,12 @@ export const certifications = [
 ```
 
 Fields:
-- `name` — the certificate title.
-- `issuer` — who issued it.
-- `date` — when.
-- `highlight: true` — *(optional)* gives the card an accent look. Use it for your
-  strongest 4–6 certs. Leave it out for the rest.
-- `badge: '…'` — *(optional)* a small pill like `Top 10% globally`.
+- `name`: the certificate title.
+- `issuer`: who issued it.
+- `date`: when.
+- `highlight: true`: *(optional)* gives the card an accent look. Use it for your
+  strongest 4-6 certs. Leave it out for the rest.
+- `badge: '…'`: *(optional)* a small pill like `Top 10% globally`.
 
 **To add a new certificate**, copy a line and edit it:
 
@@ -304,12 +304,12 @@ Fields:
   { name: 'Certified Kubernetes Administrator', issuer: 'CNCF', date: 'Jan 2027', highlight: true },
 ```
 
-The count in the section heading ("15 credentials…") updates **automatically** — it's
+The count in the section heading ("15 credentials…") updates **automatically**, it's
 computed from the length of this list.
 
 > 🔗 **Want each cert to be clickable to its verification page?** Add a `url` field:
 > `{ name: '…', issuer: '…', date: '…', url: 'https://link-to-credential' }`.
-> Tell me and I'll wire the cards to use it — currently they link collectively to
+> Tell me and I'll wire the cards to use it. Currently they link collectively to
 > your LinkedIn certifications page via `profile.certificationsUrl`.
 
 ---
@@ -321,7 +321,7 @@ Each project card is one `{ … }` in the `projects` list:
 ```js
 export const projects = [
   {
-    name: 'CloudCare — AWS on Terraform',
+    name: 'CloudCare, AWS on Terraform',
     category: 'Cloud & DevOps',        // must match one of the filter categories
     featured: true,                    // true = accent border + "★ featured" tag
     description: 'Production-style, AWS-native Hospital Management System…',
@@ -332,13 +332,13 @@ export const projects = [
 ```
 
 Fields:
-- `name` — the project title (also the clickable link text).
-- `category` — **must** be one of: `'Cloud & DevOps'`, `'Full-Stack'`, `'AI / ML'`
+- `name`: the project title (also the clickable link text).
+- `category`: **must** be one of: `'Cloud & DevOps'`, `'Full-Stack'`, `'AI / ML'`
   (these are the filter buttons, defined in `projectCategories`).
-- `featured: true` — highlights it. Set to `false` (or delete the line) for normal.
-- `description` — the summary paragraph.
-- `tags` — the little tech pills.
-- `repo` — the GitHub URL the card links to.
+- `featured: true`: highlights it. Set to `false` (or delete the line) for normal.
+- `description`: the summary paragraph.
+- `tags`: the little tech pills.
+- `repo`: the GitHub URL the card links to.
 
 **Add a project** → copy a block, paste it, edit the fields. **Reorder** → move the
 blocks up/down (top = shown first). **Feature/unfeature** → flip `featured`.
@@ -361,7 +361,7 @@ export const projectCategories = ['All', 'Cloud & DevOps', 'Full-Stack', 'AI / M
    - Or via command line: `cwebp -q 82 myphoto.jpg -o profile.webp`
 3. Put the file at **`public/profile.webp`** (replace the placeholder).
 
-That's it — the hero photo updates. (If the file is missing, the site automatically
+That's it, the hero photo updates. (If the file is missing, the site automatically
 shows your GitHub avatar, so it never looks broken.)
 
 To use a **different filename**, update this line in `profile.js`:
@@ -417,7 +417,7 @@ the same file, if you want to tweak that too.
 If someday you want a brand-new section (e.g. "Blog" or "Talks"), the pattern is:
 
 1. **Add the data** to `profile.js` (a new `export const talks = [ … ]`).
-2. **Create the component** `src/components/Talks.jsx` — copy an existing one like
+2. **Create the component** `src/components/Talks.jsx`, copying an existing one like
    `Certifications.jsx` and adapt it (it's the closest template).
 3. **Register it** in `src/App.jsx`: `import Talks` and place `<Talks />` where you
    want it.
@@ -427,7 +427,7 @@ If someday you want a brand-new section (e.g. "Blog" or "Talks"), the pattern is
 5. **Renumber** the `// 0N. …` labels in the section headings if you inserted it in
    the middle.
 
-This is more involved — if you get stuck, ask me and I'll scaffold it for you.
+This is more involved, so if you get stuck, ask me and I'll scaffold it for you.
 
 ---
 
@@ -447,12 +447,12 @@ edit, it's almost always one of these:
    ```
 3. **Brackets must stay balanced.** Every `{` needs a `}`, every `[` a `]`, every
    `(` a `)`. If you delete a block, delete the whole thing including its brackets.
-4. **Don't remove the `export` keyword** in front of a variable — the components
+4. **Don't remove the `export` keyword** in front of a variable, because the components
    import it by that name.
 5. **Keep the quotes.** Every piece of text needs quotes around it: `'like this'`.
 
 **If something breaks:** the `npm run dev` terminal (and the browser console, opened
-with F12) prints the **exact file and line number** of the problem. Read that line —
+with F12) prints the **exact file and line number** of the problem. Read that line;
 it's usually a missing comma or quote. Undo your last change if unsure.
 
 ---
