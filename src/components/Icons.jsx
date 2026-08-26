@@ -1,4 +1,4 @@
-// Inline SVG icons — no icon library dependency, fully theme-aware via currentColor.
+// Inline SVG icons, so there is no icon-library dependency. Theme-aware via currentColor.
 
 export const GitHubIcon = (p) => (
   <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden {...p}>

@@ -12,7 +12,7 @@ export default function Contact() {
           <p className="contact__text">
             I'm actively looking for <strong>Software Engineering, DevOps &amp; SRE</strong>{' '}
             opportunities. If you have a role, a project, or just want to talk shop about
-            infrastructure and AI agents — my inbox is open.
+            infrastructure and AI agents, my inbox is open.
           </p>
 
           <a href={profile.socials.email} className="btn btn-primary contact__cta">

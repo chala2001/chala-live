@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="container footer__inner">
         <div className="footer__left">
-          <span className="footer__prompt prompt">$</span> built by {profile.name} — React ·
+          <span className="footer__prompt prompt">$</span> built by {profile.name} · React ·
           Vite · Framer Motion
         </div>
         <div className="footer__right">

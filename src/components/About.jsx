@@ -7,7 +7,7 @@ export default function About() {
       <div className="container">
         <Reveal>
           <span className="section-label">// 01. about</span>
-          <h2 className="section-title">Engineer across the full stack — and the full lifecycle.</h2>
+          <h2 className="section-title">I take a system the whole way.</h2>
         </Reveal>
 
         <div className="about__grid">

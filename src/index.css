@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════
-   Chalaka Perera — Portfolio
+   Chalaka Perera · Portfolio
    Design system: "Terminal / Engineer"
    Dark is the primary theme; light is a first-class alternate.
    ═══════════════════════════════════════════════════════════════ */
@@ -20,7 +20,7 @@
   --accent: #38c7d4;         /* signature teal-cyan */
   --accent-soft: rgba(56, 199, 212, 0.12);
   --accent-line: rgba(56, 199, 212, 0.28);
-  --amber: #e6b34a;          /* warm secondary — prompts, active bits */
+  --amber: #e6b34a;          /* warm secondary: prompts, active bits */
   --amber-soft: rgba(230, 179, 74, 0.12);
 
   --shadow: 0 20px 50px -24px rgba(0, 0, 0, 0.7);
