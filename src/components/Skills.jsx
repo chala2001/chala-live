@@ -3,10 +3,10 @@ import { skills } from '../data/profile.js'
 
 export default function Skills() {
   return (
-    <section id="skills" className="section">
+    <section id="skills" className="section section--alt">
       <div className="container">
         <Reveal>
-          <span className="section-label">// 03. skills</span>
+          <span className="section-label">// 04. skills</span>
           <h2 className="section-title">The toolbox.</h2>
           <p className="section-intro">
             Technologies I reach for, grouped by where they live in the stack.

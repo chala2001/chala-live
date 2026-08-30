@@ -4,10 +4,10 @@ import { ArrowIcon } from './Icons.jsx'
 
 export default function Certifications() {
   return (
-    <section id="certifications" className="section section--alt">
+    <section id="certifications" className="section">
       <div className="container">
         <Reveal>
-          <span className="section-label">// 04. certifications</span>
+          <span className="section-label">// 05. certifications</span>
           <h2 className="section-title">Verified &amp; always learning.</h2>
           <p className="section-intro">
             {certifications.length} credentials across cloud, DevOps and AI. The highlighted

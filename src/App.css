@@ -926,3 +926,105 @@
   .projects__grid { grid-template-columns: 1fr; }
   .exp__card { padding: 22px 20px; }
 }
+
+/* ── Open source ───────────────────────────────────────────── */
+.oss__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 20px;
+}
+.oss__card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.2s;
+}
+.oss__card:hover { border-color: var(--accent-line); }
+.oss__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+.oss__title a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.08rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  transition: color 0.2s;
+}
+.oss__title a:hover { color: var(--accent); }
+.oss__arrow { opacity: 0.5; transition: transform 0.2s, opacity 0.2s; }
+.oss__title a:hover .oss__arrow { transform: translate(2px, -2px); opacity: 1; }
+.oss__stars {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--text-faint);
+  margin-top: 4px;
+}
+.oss__badge {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-line);
+  padding: 3px 10px;
+  border-radius: 100px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.oss__org {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+.oss__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 18px;
+  flex-grow: 1;
+}
+.oss__list li {
+  display: flex;
+  gap: 10px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+.oss__bullet { color: var(--accent); flex-shrink: 0; }
+.oss__footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  border-top: 1px solid var(--border);
+  padding-top: 14px;
+  margin-bottom: 14px;
+}
+.oss__prs-label {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--text-faint);
+  margin-right: 2px;
+}
+.oss__pr {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 3px 9px;
+  transition: color 0.2s, border-color 0.2s;
+}
+.oss__pr:hover { color: var(--accent); border-color: var(--accent-line); }
+.oss__tags { display: flex; flex-wrap: wrap; gap: 8px; }

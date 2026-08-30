@@ -7,7 +7,7 @@ export default function Contact() {
     <section id="contact" className="section contact">
       <div className="container contact__inner">
         <Reveal>
-          <span className="section-label">// 06. contact</span>
+          <span className="section-label">// 07. contact</span>
           <h2 className="section-title contact__title">Let's build something.</h2>
           <p className="contact__text">
             I'm actively looking for <strong>Software Engineering, DevOps &amp; SRE</strong>{' '}

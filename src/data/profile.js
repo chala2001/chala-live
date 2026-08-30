@@ -8,7 +8,7 @@ export const profile = {
   initials: 'CP',
   // Roles cycled in the hero terminal
   roles: [
-    'Software Developer',
+    'Software Engineer',
     'DevOps / SRE Engineer',
     'Agentic AI Developer',
   ],
@@ -18,7 +18,7 @@ export const profile = {
   status: 'Open to Software Engineering, DevOps & SRE roles',
   email: 'chalakasamith@gmail.com',
   // Drop your resume PDF into /public and it will be linked automatically.
-  resume: '/Chalaka_Samith_CV.pdf',
+  resume: '/Chalaka_Perera_CV.pdf',
   // Replace /profile.webp in /public with your own photo (see README).
   photo: '/profile.webp',
   githubAvatar: 'https://avatars.githubusercontent.com/u/150885184?v=4',
@@ -35,14 +35,14 @@ export const profile = {
 // ── About: short narrative + the numbers that matter ──────────
 export const about = {
   paragraphs: [
-    "I'm a Computer Engineering undergraduate at the University of Peradeniya, First Class with a 3.971 GPA, and an SRE intern at WSO2. Writing the service is only the start of it for me; I want to containerise it, stand up the infrastructure it runs on, and keep it healthy once real people depend on it.",
-    "Most of my work sits between full-stack development and DevOps/SRE: FastAPI and Spring Boot backends behind React frontends, packaged with Docker, orchestrated on Kubernetes, provisioned with Terraform and shipped through GitHub Actions. Lately it has been AI agents that take real work off the team, and I pick the models on measured results rather than reputation.",
+    "I'm a final-year Computer Engineering undergraduate at the University of Peradeniya, First Class with a 3.971 GPA, and an SRE intern at WSO2. I build production software across the application, cloud and infrastructure layers, and reliability and security are the parts I care about most.",
+    "Writing the service is only the start of it for me. I want to containerise it, stand up the infrastructure it runs on, ship it through CI/CD and keep it healthy once real people depend on it. Lately that has meant AI-powered systems, where I pick the models on measured results rather than reputation. I also work upstream: five pull requests merged into CNCF and PyData projects so far.",
   ],
   stats: [
     { value: '3.971', label: 'GPA / 4.00' },
+    { value: '5', label: 'Open-source PRs merged' },
     { value: '20+', label: 'Public Projects' },
     { value: '15+', label: 'Certifications' },
-    { value: '1,077', label: 'Tests across my WSO2 work' },
   ],
 }
 
@@ -55,16 +55,17 @@ export const experience = [
     type: 'Internship',
     location: 'Colombo · On-site',
     summary:
-      'On the SRE team, building AI agents that take real operational work off the team. Two projects so far: a compliance evidence portal now running in production as an internal WSO2 application, and a grounded assistant for the SRE team currently in security review.',
+      'On the SRE team, building production software across the application, cloud and infrastructure layers. Two projects so far: a compliance evidence portal now running in production at WSO2, and a grounded assistant for the SRE team currently under security review.',
     highlights: [
-      'Compliance Evidence Submission Portal: replaced the team’s manual evidence collection with an AI agent that drives cloud consoles and GitHub in a real browser, captures what each compliance control needs as a screenshot or PDF, and files it automatically. Task templates let one instruction cover every resource the agent finds.',
-      'Wrote the portal’s threat model and defended it in security review, which is what took it into production. The same work closed an open route where anyone guessing a file’s ID could download evidence without signing in. Evidence now sits behind links that expire in fifteen minutes.',
-      'Packaged the agent as an installable command-line tool and wrote the repository’s first release pipeline, so a version tag builds the wheel and publishes a GitHub Release. First-party actions only, so no unreviewed code ever holds the repository’s tokens.',
-      'SRE Ops Pilot: stopped the assistant inventing answers by checking its work in code instead of trusting it. The backend opens the document behind every citation and confirms the quoted line is really there, hiding any source that fails and warning the reader.',
-      'Skipped the usual vector database and fed whole documents instead, because cutting them into pieces separates a table’s numbers from the headings that give them meaning. Better document matching brought the questions needing the whole library down from 44 of 65 to 21, and the average request from 53k to 40k tokens.',
-      'Chose the model on results rather than reputation, against a 65-question test set with 15 deliberately unanswerable. The winner scored 63 of 65, correctly refused all 25 trick questions, and answered in 5.1 seconds instead of 12.2.',
+      'Compliance Evidence Submission Portal: engineers were collecting audit evidence by hand, screenshotting and exporting PDFs out of GitHub and cloud consoles. I built a full-stack portal with a browser agent that signs in and captures it automatically.',
+      'Designed reusable templates so one instruction collects evidence across every matching resource, instead of one instruction per resource.',
+      'Conducted threat modelling and took the portal through security review, which approved it for production use at WSO2. Fixed an access-control flaw that allowed unauthenticated downloads, and enforced single sign-on on every request.',
+      'Packaged the tool for one-command installation and built the repository’s first automated release pipeline. Wrote unit and end-to-end tests for every API endpoint, running against a real database instead of mocks.',
+      'SRE Ops Pilot: runbooks and operational documentation were spread across systems, so routine questions were slow to answer. Built a full-stack assistant that answers from that documentation and cites a source for every statement, with a verification layer that checks each quote against the source document before the reader sees it.',
+      'Engineered document selection to send only the relevant content, cutting cost and preventing runaway API spend. Evaluated candidate models against a test set drawn from the team’s real questions and picked the one that answered 63 of 65 correctly, rejected every unanswerable question and ran twice as fast.',
+      'Delivered single sign-on, conversation history, per-user cost tracking, an audit log and a configurable spend cap, with unit and end-to-end tests across backend and frontend.',
     ],
-    stack: ['Python', 'FastAPI', 'Azure OpenAI', 'browser-use', 'Playwright', 'React', 'TypeScript', 'WSO2 Choreo', 'Asgardeo / OAuth 2.0', 'pytest'],
+    stack: ['Python', 'FastAPI', 'Azure OpenAI', 'browser-use', 'Playwright', 'React', 'TypeScript', 'PostgreSQL', 'WSO2 Developer Platform', 'OAuth 2.0', 'pytest'],
   },
   {
     role: 'Undergraduate Teaching Assistant',
@@ -111,15 +112,15 @@ export const activities = [
 export const skills = [
   {
     group: 'Languages',
-    items: ['Python', 'Java', 'TypeScript', 'JavaScript', 'C', 'C++', 'SQL', 'Bash'],
+    items: ['Python', 'Java', 'TypeScript', 'JavaScript', 'C', 'C++', 'SQL'],
   },
   {
     group: 'Backend & Web',
-    items: ['FastAPI', 'Spring Boot', 'Node.js', 'React', 'React Native (Expo)', 'REST', 'WebSockets', 'SSE'],
+    items: ['FastAPI', 'Spring Boot', 'React', 'React Native (Expo)', 'REST', 'WebSockets', 'SSE'],
   },
   {
     group: 'Cloud & IaC',
-    items: ['AWS', 'Azure', 'WSO2 Choreo', 'Terraform', 'Helm', 'Docker', 'Kubernetes (EKS)', 'Linux', 'NGINX'],
+    items: ['AWS', 'Azure', 'WSO2 Developer Platform', 'Terraform', 'Helm', 'Docker', 'Kubernetes (EKS)', 'NGINX'],
   },
   {
     group: 'CI/CD & Observability',
@@ -127,15 +128,52 @@ export const skills = [
   },
   {
     group: 'Data & Messaging',
-    items: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'SQLAlchemy', 'Alembic', 'Azure Blob', 'Kafka', 'MQTT'],
+    items: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'SQLAlchemy', 'Alembic', 'Azure Blob', 'MQTT'],
   },
   {
     group: 'AI & Agents',
-    items: ['Azure OpenAI', 'Claude API', 'RAG', 'LLM Eval Harnesses', 'browser-use', 'Playwright', 'LangChain', 'OpenCV'],
+    items: ['Azure OpenAI', 'RAG', 'LLM Eval Harnesses', 'browser-use', 'Playwright', 'LangChain', 'OpenCV'],
   },
   {
     group: 'Security & Tools',
-    items: ['Threat Modeling', 'Enterprise SSO', 'WSO2 Asgardeo', 'OAuth 2.0', 'OIDC', 'JWT', 'Git', 'Claude Code', 'pytest'],
+    items: ['Threat Modeling', 'Enterprise SSO', 'OAuth 2.0', 'Git'],
+  },
+]
+
+// ── Open source contributions (upstream, merged) ──────────────
+export const openSource = [
+  {
+    name: 'Kubernetes Python Client',
+    org: 'CNCF',
+    stars: '7.6k stars',
+    badge: '4 PRs merged',
+    url: 'https://github.com/kubernetes-client/python',
+    prs: [
+      { id: '#2690', url: 'https://github.com/kubernetes-client/python/pull/2690' },
+      { id: '#2689', url: 'https://github.com/kubernetes-client/python/pull/2689' },
+      { id: '#2688', url: 'https://github.com/kubernetes-client/python/pull/2688' },
+      { id: '#2687', url: 'https://github.com/kubernetes-client/python/pull/2687' },
+    ],
+    highlights: [
+      'Four pull requests merged into the official Kubernetes client for Python, a CNCF project with 7.6k stars.',
+      'It could only lock leader election on a ConfigMap, which client-go had dropped. I shipped the missing Lease lock.',
+      'Found it storing local wall-clock time labelled as UTC, silently breaking leader election against other Kubernetes clients on any non-UTC host.',
+      '155 lines of runtime code behind 17 unit tests, reviving an abandoned contribution and crediting its original author.',
+      'Earlier merges: the standard SPDX license identifier across all three build scripts, and a repair to the broken documentation build.',
+    ],
+    tags: ['Python', 'Kubernetes', 'Leader Election', 'CNCF', 'Unit Testing'],
+  },
+  {
+    name: 'sktime',
+    org: 'Time-Series ML',
+    stars: '10k stars',
+    badge: '1 PR merged',
+    url: 'https://github.com/sktime/sktime',
+    prs: [{ id: '#10908', url: 'https://github.com/sktime/sktime/pull/10908' }],
+    highlights: [
+      'Merged into sktime, a 10k-star time-series machine learning library, documenting two capabilities its extension templates left out.',
+    ],
+    tags: ['Python', 'Time-Series ML', 'Documentation'],
   },
 ]
 
@@ -149,8 +187,8 @@ export const projects = [
     featured: true,
     openSource: true,
     description:
-      'Built during my WSO2 SRE internship, now in production as an internal WSO2 application and released open source under the wso2-open-operations GRC platform. An AI agent drives cloud consoles and GitHub in a real browser, captures what each compliance control needs as a screenshot or PDF, and files it automatically. FastAPI backend on WSO2 Choreo storing data in Azure PostgreSQL and evidence in Azure Blob Storage, a React and TypeScript frontend, enterprise SSO on every request, and 410 tests that run against a real database rather than mocks.',
-    tags: ['Agentic AI', 'Python', 'FastAPI', 'browser-use', 'Playwright', 'Azure OpenAI', 'WSO2 Choreo', 'Asgardeo / OAuth 2.0', 'Apache-2.0'],
+      'Built during my WSO2 SRE internship, now in production and released open source under the wso2-open-operations GRC platform. Engineers used to collect audit evidence by hand; this portal runs a browser agent that signs in, captures what each compliance control needs as a screenshot or PDF, and files it automatically. Reusable templates let one instruction cover every matching resource. FastAPI backend storing data in Azure PostgreSQL and evidence in Azure Blob Storage, a React and TypeScript frontend, single sign-on on every request, and tests for every endpoint that run against a real database instead of mocks.',
+    tags: ['Agentic AI', 'Python', 'FastAPI', 'browser-use', 'Playwright', 'Azure OpenAI', 'WSO2 Developer Platform', 'OAuth 2.0', 'Apache-2.0'],
     repo: 'https://github.com/wso2-open-operations/grc-tools',
   },
   {
@@ -160,7 +198,7 @@ export const projects = [
     private: true,
     note: 'Internal · WSO2',
     description:
-      'A question-answering assistant for WSO2’s SRE team that refuses to bluff. Rather than trusting the model, the backend opens the document behind every citation and confirms the quoted line is really there, hiding any source that fails. It skips the usual vector database and feeds whole documents instead, because chunking separates a table’s numbers from the headings that give them meaning. The model was chosen against a 65-question evaluation set: 63 of 65 correct, all 25 trick questions refused, 5.1 seconds a response. Enterprise SSO, saved conversations, per-person cost tracking, an admin audit log and a spend cap, behind 552 backend and 115 frontend tests.',
+      'A question-answering assistant for WSO2’s SRE team that refuses to bluff. Runbooks and operational docs were spread across systems, so routine questions were slow to answer. It answers from that documentation and cites a source for every statement, and a verification layer checks each quote against the source document before the reader sees it. Document selection sends only the relevant content, which keeps cost down and prevents runaway API spend. The model was chosen against a test set built from the team’s real questions: 63 of 65 correct, every unanswerable question rejected, and twice the speed of the runner-up. Single sign-on, conversation history, per-user cost tracking, an audit log and a configurable spend cap, with tests across backend and frontend.',
     tags: ['RAG', 'LLM Evaluation', 'Azure OpenAI', 'Python', 'FastAPI', 'PostgreSQL', 'SSE Streaming', 'React', 'TypeScript'],
   },
   {
@@ -221,9 +259,9 @@ export const projects = [
     name: 'Lightify, Smart Home IoT Lighting',
     category: 'IoT',
     featured: false,
-    note: 'Group · my scope: firmware',
+    note: 'Group · my scope: network & firmware',
     description:
-      'A smart-home lighting system that detects room occupancy and adjusts the lights to match. I wrote the ESP32 firmware, in C and C++, that the whole system runs on: reading the occupancy sensors, driving the lights, and letting a new device join over Wi-Fi or Bluetooth without being reprogrammed. The devices talk to AWS IoT Core over MQTT so the backend can read sensor data and send commands back in real time. Presented at EngEx 2025, University of Peradeniya.',
+      'A smart-home lighting system that detects room occupancy and adjusts the lights to match. I designed the network architecture and wrote the ESP32 firmware, in C and C++, that the whole system runs on. A new device joins over Wi-Fi or Bluetooth and is configured in place, never reprogrammed. The firmware reads the occupancy sensors, drives the lights, and carries data and commands to AWS IoT Core over MQTT. Presented at EngEx 2025, University of Peradeniya.',
     tags: ['ESP32', 'C / C++', 'AWS IoT Core', 'MQTT', 'Wi-Fi / BLE Provisioning', 'Spring Boot', 'MongoDB'],
     repo: 'https://github.com/cepdnaclk/e20-3yp-Smart-IOT-Indoor-Lighting-System',
     web: 'https://cepdnaclk.github.io/e20-3yp-Smart-IOT-Indoor-Lighting-System/',
@@ -295,6 +333,7 @@ export const navLinks = [
   { id: 'home', label: 'home' },
   { id: 'about', label: 'about' },
   { id: 'experience', label: 'experience' },
+  { id: 'opensource', label: 'open source' },
   { id: 'skills', label: 'skills' },
   { id: 'certifications', label: 'certs' },
   { id: 'projects', label: 'projects' },
