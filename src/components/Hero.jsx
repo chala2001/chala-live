@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-scroll'
 import { profile } from '../data/profile.js'
-import { GitHubIcon, LinkedInIcon, MailIcon, ArrowIcon, DownloadIcon, LocationIcon } from './Icons.jsx'
+import { GitHubIcon, LinkedInIcon, MediumIcon, MailIcon, ArrowIcon, DownloadIcon, LocationIcon } from './Icons.jsx'
 
 // Small typewriter for the cycling role line.
 function useTypewriter(words, { type = 70, del = 38, hold = 1500 } = {}) {
@@ -89,6 +89,7 @@ export default function Hero() {
           <motion.div className="hero__socials" variants={item}>
             <a href={profile.socials.github} target="_blank" rel="noreferrer" aria-label="GitHub"><GitHubIcon /></a>
             <a href={profile.socials.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn"><LinkedInIcon /></a>
+            <a href={profile.socials.medium} target="_blank" rel="noreferrer" aria-label="Medium"><MediumIcon /></a>
             <a href={profile.socials.email} aria-label="Email"><MailIcon /></a>
           </motion.div>
         </motion.div>

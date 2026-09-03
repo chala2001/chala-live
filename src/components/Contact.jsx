@@ -1,6 +1,6 @@
 import Reveal from './Reveal.jsx'
 import { profile } from '../data/profile.js'
-import { GitHubIcon, LinkedInIcon, MailIcon, ArrowIcon } from './Icons.jsx'
+import { GitHubIcon, LinkedInIcon, MediumIcon, MailIcon, ArrowIcon } from './Icons.jsx'
 
 export default function Contact() {
   return (
@@ -25,6 +25,9 @@ export default function Contact() {
             </a>
             <a href={profile.socials.linkedin} target="_blank" rel="noreferrer" className="contact__social">
               <LinkedInIcon /> <span>LinkedIn</span> <ArrowIcon />
+            </a>
+            <a href={profile.socials.medium} target="_blank" rel="noreferrer" className="contact__social">
+              <MediumIcon /> <span>Medium</span> <ArrowIcon />
             </a>
           </div>
         </Reveal>

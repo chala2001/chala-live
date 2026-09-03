@@ -26,6 +26,7 @@ export const profile = {
   socials: {
     github: 'https://github.com/chala2001',
     linkedin: 'https://www.linkedin.com/in/chalaka-perera-a280b9324',
+    medium: 'https://medium.com/@chalakasamith',
     email: 'mailto:chalakasamith@gmail.com',
   },
   certificationsUrl:
