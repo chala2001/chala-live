@@ -8,9 +8,10 @@ export default function OpenSource() {
       <div className="container">
         <Reveal>
           <span className="section-label">// 03. open source</span>
-          <h2 className="section-title">Merged upstream.</h2>
+          <h2 className="section-title">Open source contributions.</h2>
           <p className="section-intro">
-            Contributions to projects I use, sent to the people who maintain them.
+            Code I've sent upstream to projects I use, reviewed and merged by the
+            people who maintain them.
           </p>
         </Reveal>
 
