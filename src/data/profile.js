@@ -270,7 +270,7 @@ export const projects = [
     description:
       'Final-year research: a system that finds attacks inside encrypted network traffic without ever decrypting it, so privacy stays intact while threats are still caught. Paired with Explainable AI so an analyst sees why a connection was flagged rather than only that it was, and measured against the CIC-IDS-2017 benchmark. Presented and defended before an external expert panel at iPURSE 2026, the Peradeniya University International Research Symposium, where the abstract was accepted into the conference proceedings.',
     tags: ['Semi-Supervised ML', 'Explainable AI', 'CIC-IDS-2017', 'Python', 'NumPy', 'iPURSE 2026'],
-    repo: 'https://github.com/chala2001/bcc_darknet_project',
+    repo: 'https://github.com/cepdnaclk/e20-4yp-Explainable-AI-Driven-Zero-Trust-Anomaly-Detection-for-Encrypted-Traffic',
   },
   {
     name: 'Lightify, Smart Home IoT Lighting',
