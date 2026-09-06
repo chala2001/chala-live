@@ -10,8 +10,7 @@ export default function Certifications() {
           <span className="section-label">// 05. certifications</span>
           <h2 className="section-title">Verified &amp; always learning.</h2>
           <p className="section-intro">
-            {certifications.length} credentials across cloud, DevOps and AI. The highlighted
-            ones are the ones I'm proudest of.
+            {certifications.length} credentials across cloud, DevOps and AI.
           </p>
         </Reveal>
 

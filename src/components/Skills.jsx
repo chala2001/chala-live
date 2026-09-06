@@ -9,7 +9,7 @@ export default function Skills() {
           <span className="section-label">// 04. skills</span>
           <h2 className="section-title">The toolbox.</h2>
           <p className="section-intro">
-            Technologies I reach for, grouped by where they live in the stack.
+            Grouped by where they live in the stack.
           </p>
         </Reveal>
 

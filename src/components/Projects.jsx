@@ -15,7 +15,7 @@ export default function Projects() {
           <span className="section-label">// 06. projects</span>
           <h2 className="section-title">Things I've shipped.</h2>
           <p className="section-intro">
-            A curated selection. Everything here is on my GitHub, with the source open to read.
+            A curated selection. Source is public.
           </p>
         </Reveal>
 

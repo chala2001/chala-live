@@ -9,7 +9,7 @@ export default function Experience() {
           <span className="section-label">// 02. experience</span>
           <h2 className="section-title">Where I've been building.</h2>
           <p className="section-intro">
-            Real production and internship work, not just coursework.
+            Production work, not coursework.
           </p>
         </Reveal>
 

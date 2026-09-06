@@ -10,8 +10,7 @@ export default function OpenSource() {
           <span className="section-label">// 03. open source</span>
           <h2 className="section-title">Open source contributions.</h2>
           <p className="section-intro">
-            Code I've sent upstream to projects I use, reviewed and merged by the
-            people who maintain them.
+            Code I've sent upstream, reviewed and merged by the maintainers.
           </p>
         </Reveal>
 

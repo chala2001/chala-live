@@ -10,9 +10,8 @@ export default function Contact() {
           <span className="section-label">// 07. contact</span>
           <h2 className="section-title contact__title">Let's build something.</h2>
           <p className="contact__text">
-            I'm actively looking for <strong>Software Engineering, DevOps &amp; SRE</strong>{' '}
-            opportunities. If you have a role, a project, or just want to talk shop about
-            infrastructure and AI agents, my inbox is open.
+            Looking for <strong>Software Engineering, DevOps &amp; SRE</strong> roles. If you
+            have one, or just want to talk infrastructure and AI agents, my inbox is open.
           </p>
 
           <a href={profile.socials.email} className="btn btn-primary contact__cta">
